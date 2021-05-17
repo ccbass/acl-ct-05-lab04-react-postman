@@ -14,6 +14,6 @@ export function PostmanHistory ({ historyArr }) {
     )
 }
 
-PostmanHistory.PropTypes = {
+PostmanHistory.propTypes = {
     historyArr: PropTypes.arrayOf(object)
 }

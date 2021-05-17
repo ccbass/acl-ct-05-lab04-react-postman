@@ -4,9 +4,23 @@ import PropTypes from 'prop-types'
 export function PostmanControls ({handleMethod, handleUrl, handleSubmit, handleBody, method}) {
     return (
         <div>
-            <input style={{width: '50vw'}} type="text" onChange={handleUrl}/>
+            <label htmlFor='url-input'>Request URL:</label>
+            <input 
+                style={{width: '50vw'}} 
+                type="text" 
+                onChange={handleUrl} 
+                id={'url-input'}
+                placeholder={'URL address'}
+            />
             <br />
-            <button onClick={handleSubmit}>Submit Request</button>
+
+            <button 
+                id={'url-submit-btn'}
+                onClick={handleSubmit}
+            >
+                Submit Request
+            </button>
+
             <br />
             Selected method: {method ? method : 'Choose method below!'}
             <br />
@@ -28,7 +42,7 @@ export function PostmanControls ({handleMethod, handleUrl, handleSubmit, handleB
     )
 }
 
-PostmanControls.PropTypes = {
+PostmanControls.propTypes = {
     handleMethod: PropTypes.func.isRequired, 
     handleUrl: PropTypes.func.isRequired, 
     handleSubmit: PropTypes.func.isRequired, 
