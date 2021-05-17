@@ -1,5 +1,7 @@
 import React from 'react'
+import { PostmanContainer } from '../../containers/PostmanContainer'
 
 export default function App() {
-  return <h1>hello</h1>
+  return <PostmanContainer />
 }
+
